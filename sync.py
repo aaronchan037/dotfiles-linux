@@ -4,15 +4,12 @@ import os,sys
 dotfiles = "~/repos/dotfiles-linux"
 
 # Arch Linux
-archlinux_setting = [".zshrc", ".zshenv"]
+zsh_setting = [".zshrc", ".zshenv"]
 # Other settings
-shell_alias = [".sh_alias"]
-git_config = [".gitconfig", ".gitmessage"]
-vim_config = [".vimrc"]
-other_settings = [".cargo/config.toml"]
-gpg_config = [".gnupg/gpg-agent.conf", ".gnupg/gpg.conf"]
+base_alias = [".sh_alias", ".gitconfig", ".gitmessage", ".vimrc"]
+other_settings = [".gnupg/gpg-agent.conf", ".gnupg/gpg.conf", ".ssh/config", ".cargo/config.toml"]
 
-files = shell_alias + git_config + vim_config + other_settings + gpg_config
+files = base_alias + other_settings
 dirs = [".config/nvim", ".config/tmux", ".config/lazygit", ".config/containers", ".pip"]
 
 def archlinux_file(file_name):
@@ -38,7 +35,7 @@ def arch():
     for i in files:
         os.system(f"{del_check_file(i)}")
     print("===== Arch Linux =====")
-    for i in archlinux_setting:
+    for i in zsh_setting:
         os.system(f"{archlinux_file(i)}")
 
 eval(sys.argv[1] + "()")

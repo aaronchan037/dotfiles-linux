@@ -2,16 +2,16 @@ input=$1
 
 base_install()
 {
-  # fastfetch, neovim, lazygit, cron, tmux, Typst, aria2
-  yes | sudo pacman -S fastfetch neovim lazygit cronie tmux typst aria2
-  fastfetch -v && nvim -v && lazygit -v && crontab -V && tmux -V && typst -V && aria2c --version
-  ############### Docker ###############
+  # pacman-contrib, fastfetch, neovim, lazygit, cron, tmux, Typst, aria2, less, ranger, yazi (替代 ranger), Tree
+  yes | sudo pacman -S pacman-contrib fastfetch neovim lazygit cronie tmux typst aria2 less ranger yazi tree
+  fastfetch -v && nvim -v && lazygit -v && crontab -V && tmux -V && typst -V && aria2c --version && less --version && ranger --version && yazi --version && tree --version
+  ############### Docker, Podman ###############
   # docker, docker-buildx, docker-compose
   yes | sudo pacman -S docker docker-buildx docker-compose
   docker --version && docker buildx version && docker-compose version
-  ############### Podman ###############
   yes | sudo pacman -S podman podman-compose
   podman version && podman-compose --version
+  ##############################################
   # mupdf
   sudo pacman -S mupdf
   # mutool
@@ -22,14 +22,6 @@ base_install()
   yes | sudo pacman -S tar p7zip zip unzip
   # mysql
   sudo pacman -S mysql
-  # ranger
-  yes | sudo pacman -S ranger && ranger --version
-  # yazi (替代 ranger)
-  yes | sudo pacman -S yazi && yazi --version
-  # pacman-contrib
-  yes | sudo pacman -S pacman-contrib
-  # less
-  yes | sudo pacman -S less && less --version
 }
 
 # 不要折腾各种CLI工具和沉迷于配置这些工具，Linux系统是给你学习编程的，而不是用于娱乐的
@@ -37,10 +29,10 @@ base_install()
 
 more_install()
 {
+  # dhcpcd
+  yes | sudo pacman -S dhcpcd
   # ffmpeg
   yes | sudo pacman -S ffmpeg
-  # Tree
-  yes | sudo pacman -S tree && tree --version
   # Hugo
   yes | sudo pacman -S hugo && hugo version
   # w3m
