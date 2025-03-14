@@ -1,0 +1,52 @@
+dotfiles_dir=~/repos/dotfiles-linux
+
+
+### Test
+alias hello="echo Hello!"
+alias hi="echo Hi!"
+alias bye="echo So long, and thanks for all the zsh."
+
+### Linux command
+alias rm="rm -i"
+alias ll="ls -alh"
+
+# reload zsh config
+alias reload="source ~/.zshrc"
+
+# python3
+alias pip="pip3"
+alias python="python3"
+# python3 pip update
+alias pyupdate="python3 $dotfiles_dir/scripts/pip-update.py"
+
+# git last push
+alias lastpush="sh $dotfiles_dir/scripts/last-push.sh"
+
+# tar dotfiles
+# alias tardf="sh ~/repos/dotfiles/scripts/tar-dotfiles.sh"
+
+###### VSCode ######
+alias github="code ~/repos"
+alias totex="code ~/tex"
+alias tmp="code ~/tmp"
+##########################
+### shortcut key
+# lazygit
+alias lg="lazygit"
+# fastfetch
+alias ff="fastfetch"
+
+##########################
+# Coding
+alias coding="code ~/coding"
+# cd c
+alias cdc="cd ~/coding/coding-training/c"
+# cd cpp
+alias cdcpp="cd ~/coding/coding-training/cpp"
+# cd java
+alias cdjava="cd ~/coding/coding-training/java"
+# cd python
+alias cdpython="cd ~/coding/coding-training/python3"
+# cd rust
+alias cdrust="code ~/coding/rust-learn"
+##########################
