@@ -10,10 +10,9 @@
 git checkout --orphan last
 git add .
 git commit -m "latest init"
-# git commit
 git branch -D main
-# git branch -m main && git branch --set-upstream-to=origin/main main && git push -f
 git branch -m main
+# git branch --set-upstream-to=origin/main main
 git push --set-upstream --force origin main
 # git push -u -f origin main
 

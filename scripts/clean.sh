@@ -13,7 +13,7 @@ yes | sudo pacman -Scc
 # yes | sudo pacman -S pacman-contrib
 paccache -r
 
-# yes | yay -Scc
+yes | yay -Scc
 
 
 # 释放Docker内存空间
