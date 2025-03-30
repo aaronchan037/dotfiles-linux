@@ -31,6 +31,8 @@ base_install()
 
 more_install()
 {
+  # github cli
+  yes | sudo pacman -S github-cli && gh --version
   # dhcpcd
   yes | sudo pacman -S dhcpcd
   # ffmpeg

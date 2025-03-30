@@ -1,13 +1,13 @@
 -- 设置主键为空格
-vim.g.mapleader = ""
+vim.g.mapleader = "<Space>"
 
 local keymap = vim.keymap
 
--- 插入模式
+-- Insert
 keymap.set('i', "jk", "<Esc>")
 
 
--- 普通模式
+-- Normal
 keymap.set('n', "<Space>", ":")
 
 
